@@ -41,6 +41,7 @@ h2 {
 }
 
 input {
+    width: 100%;
     font-size: 1rem;
     vertical-align: middle;
     padding: .75rem;
@@ -67,28 +68,68 @@ input {
 
 .secondLine {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.age {
+    padding-bottom: 1rem;
 }
 
 .age input {
-    width: 90%;
+    width: 110%;
     font-weight: 300;
     outline: none;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
 }
 
 .email {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .email input {
-    width: 90%;
+    width: 100%;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
 }
 
-.location {
+.yearsSpentLine {
+    padding-top: 3%;
+    display: flex;
+    flex-direction: row;
+  }
+
+.yearsSpentLine h2 {
+    padding-right: 5%;
+}
+
+.yearsSpentLine input {
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.reallyPersonalLine {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reallyPersonalLine input {
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.38);
+}
+
+.heightLine {
+    display: flex;
+    justify-content: space-around;
     padding-bottom: 2rem;
 }
+
+
+
+.inputContainer {
+    width: 90%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
 
 .location input {
     width: 100%;
@@ -97,7 +138,7 @@ input {
 
 .thirdLine {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 2%;
 }
