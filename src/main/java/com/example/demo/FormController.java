@@ -20,7 +20,7 @@ public class FormController {
 
     @GetMapping("/user-form-basic")
     public String basicUserEntryForm() {
-        return "userInputBasicForm";
+        return "userBasicForm";
     }
 
 

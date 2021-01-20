@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/userBasicForm.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>User Questionnaire</title>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+
+    </script>
+    <script>
+        function SubForm() {
+            $.ajax({
+                url: 'https://api.apispreadsheets.com/data/6626/',
+                type: 'post',
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("Form Data Submitted :)")
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+<div class="bgImage"></div>
+<div class="container">
+    <h1 class="greeting">Create Your MarHar Profile</h1>
+    <p class="greeting__text"> a few short answers will win you fame and fortune!</p>
+
+
+    <form>
+
+        <div class="firstLine">
+            <div class="firstName">
+                <input placeholder="First name *" type="text" id="firstName" name="firstName" required/><br>
+            </div>
+            <div class="lastName">
+                <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
+            </div>
+        </div>
+
+
+
+
+        <div class="secondLine">
+
+            <div class="dropDownDiv">
+                <select name="company" class="dropDown">
+                    <option selected="selected" disabled="disabled">Company</option>
+                    <option>Gavin's Tailoring</option>
+                    <option>Troy's General Antics</option>
+                    <option>Beth's Train Company</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="thirdLine">
+            <div class="age">
+                <input placeholder="Age" type="number" id="age" name="age" min="18" max="99" required/>
+            </div>
+            <div class="email">
+                <input placeholder="Email" type="email" id="email" name="email" required/>
+            </div>
+            <div class="dropDownDiv">
+                <select name="company" class="dropDown">
+                    <option selected="selected" disabled="disabled">Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Prefer not to say</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="yearsSpentLine">
+            <h2>Years you've spent at your current job: </h2>
+            <input placeholder="years" type="number"
+                   max="99" required/>
+        </div>
+
+        <div class="reallyPersonalLine">
+            <div class="inputContainer">
+                <input placeholder="Waist size in Inches" type="number" min="18" max="99" required/>
+            </div>
+            <div class="inputContainer">
+                <input placeholder="Weights in Pounds" type="number" min="18" max="99" required/>
+            </div>
+        </div>
+
+        <div class="heightLine">
+            <h2>Your Height in Feet and Inches:</h2>
+            <div>
+                <input type="number" placeholder="feet">
+            </div>
+            <div>
+                <input type="number" placeholder="inches">
+            </div>
+        </div>
+
+        <div class="dropDownDiv">
+            <select name="company" class="dropDown">
+                <option selected="selected" disabled="disabled">Have you ever experienced lower back pain?</option>
+                <option>Yes</option>
+                <option>No</option>
+
+            </select>
+        </div>
+
+        <div class="thirdLine">
+            <h2>Please rate your overall effort at work.</h2>
+        </div>
+
+        <div class="tickDiv">
+            <small>no exertion</small>
+            <small>1</small>
+            <label class="rangeLabel">
+                <input type=range min=1 max=15 value=1 step=1 class="bigSlider">
+            </label>
+            <small>15</small>
+            <small>maximal exertion</small>
+        </div>
+        <div class="valueDiv">
+            <small class="valueDisplay"></small>
+        </div>
+
+
+
+
+
+        <div class="thirdLine">
+            <img id="omniResScale" src="images/omni-res-option2.jpg" alt="">
+        </div>
+
+
+        <div class="thirdLine">
+            <h2>Using the scale above, how hard do you feel your muscles are working for a typical lift?
+            </h2>
+        </div>
+
+
+        <div class="tickDiv">
+
+            <small>no exertion</small>
+
+            <input type=range min=0 max=10 value=1 step=1 class="recommendTick">
+            <datalist id=tickMarks2>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </datalist>
+            <small>extremely hard</small>
+        </div>
+
+
+        <div class="thirdLine">
+            <h2>Using the scale above, how hard do you feel your muscles are working for your <i>heaviest</i> lift?
+            </h2>
+        </div>
+
+
+        <div class="tickDiv">
+
+            <small>not very hard</small>
+
+            <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+            <datalist id=tickMarks3>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </datalist>
+            <small>extremely hard</small>
+        </div>
+
+
+
+        <div class="thirdLine">
+            <img id="bodyMap" src="images/frontAndBack.jpg" alt="">
+        </div>
+
+        <div class="bodyPartSectionDiv">
+            <div class="multiLine">
+                <h2>The crazy image above could have clickable regions in it, but in the meantime...</h2>
+                <h2>Please rate your level of work-related discomfort for the body part indicated:</h2>
+            </div>
+
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Right Shoulder</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks5>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Left Shoulder</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks6>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Upper Back</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks7>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Lower Back</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks8>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Right Hip</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks9>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Left Hip</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks10>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Right Thigh</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks11>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Left Thigh</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks12>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Right Knee</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks13>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+
+            <div class="bodyPartTickDiv">
+                <h3 class="bodyPart">Left Knee</h3>
+                <div class="innerScaleDiv">
+                    <small>no pain</small>
+                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
+                    <datalist id=tickMarks14>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </datalist>
+                    <small>worst possible pain</small>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="submit">
+
+            <button class="submitButtonSquare">Submit Form</button>
+        </div>
+    </form>
+</div>
+
+<script src="js/sliders.js"></script>
+</body>
+
+
+
+
+</html>
+
+
+
+
