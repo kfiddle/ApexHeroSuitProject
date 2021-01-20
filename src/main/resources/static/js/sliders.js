@@ -28,14 +28,8 @@ for (let i = 0; i < bigSliders.length; i++) {
             display = "Maximal exertion";
         }
 
+        let percent = (bigSliders[i].value / 15) * 100;
 
-        let percent = 7;
-        if (bigSliders[i].value < 5) {
-            percent = (bigSliders[i].value / 13) * 100;
-        } else {
-            percent = (bigSliders[i].value / 15) * 100;
-        }
-        ;
 
         bigSliders[i].style.background = "linear-gradient(90deg, rgb(0,0,255)" + percent + "%, rgb(214,214,214)" + percent + "%)";
         console.log(bigSliders[i].value);
@@ -44,10 +38,4 @@ for (let i = 0; i < bigSliders.length; i++) {
     ;
 }
 
-// slider.oninput = ()=> {
-//     if (slider.value == 1) {
-//         output.innerText = "no exertion";
-//     } else if (slider.value == 2) {
-//         output.innerText = "little effort";
-//     }
-// }
+
