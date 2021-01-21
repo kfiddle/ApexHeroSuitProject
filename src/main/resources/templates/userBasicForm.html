@@ -18,7 +18,7 @@
     <script>
         function SubForm() {
             $.ajax({
-                url: 'https://api.apispreadsheets.com/data/6626/',
+                url: 'https://api.apispreadsheets.com/data/6917/',
                 type: 'post',
                 data: $("#myForm").serializeArray(),
                 success: function () {
@@ -40,7 +40,7 @@
     <p class="greeting__text"> a few short answers will win you fame and fortune!</p>
 
 
-    <form>
+    <form id="myForm">
 
         <div class="firstLine">
             <div class="firstName">
@@ -50,7 +50,9 @@
                 <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
             </div>
         </div>
+    </form>
 
+ <button onclick="SubForm()">testing submit</button>
 
 
 
@@ -385,15 +387,15 @@
             </div>
 
 
-            </div>
+
         </div>
 
 
 
-        <div class="submit">
+<!--        <div class="submit">-->
 
-            <button class="submitButtonSquare">Submit Form</button>
-        </div>
+<!--            <button class="submitButtonSquare">Submit Form</button>-->
+<!--        </div>-->
     </form>
 </div>
 
