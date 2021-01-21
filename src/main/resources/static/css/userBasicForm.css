@@ -7,28 +7,30 @@
 h2 {
     color: white;
     font-weight: 900;
-
 }
 
-.greeting {
+header {
+    width: 100%;
+    top: 0;
+    background-color: black;
+    position: fixed;
+}
+
+#greeting {
+    margin-top: 5%;
+    margin-bottom: 4%;
     font-size: 3rem;
+    color: #FCE500;
+    font-weight: 700;
     text-align: center;
-    margin-top: 20px;
-    color: white;
-    font-weight: 900;
-    text-shadow: -1.8px 0 #dc4405, 0 1px #dc4405, 1px 0 #dc4405, 0 -1.8px #dc4405;
-    line-height: 5rem;
     text-transform: uppercase;
+
 }
 
-.greeting__text {
-    font-weight: 900;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 1.5rem 0 2rem 0;
-    color: #322923;
-    line-height: 2rem;
+form {
+    align-items: center;
 }
+
 
 .firstLine {
     display: grid;
@@ -106,7 +108,7 @@ input[type="range"]::-moz-range-track {
     padding-top: 3%;
     display: flex;
     flex-direction: row;
-  }
+}
 
 .yearsSpentLine h2 {
     padding-right: 5%;
@@ -199,7 +201,7 @@ select option {
 }
 
 .recommendTick {
-    height:5rem;
+    height: 5rem;
     width: 50%;
 }
 
@@ -207,7 +209,7 @@ select option {
     display: block;
 }
 
-.AgreeSection{
+.AgreeSection {
     margin-bottom: 6%;
 }
 
@@ -226,7 +228,7 @@ select option {
 }
 
 .rangeLabel {
-    width:100%;
+    width: 100%;
 }
 
 
@@ -235,11 +237,11 @@ select option {
     width: 100%;
     height: 1rem;
     background: slategray;
-    outline:none;
+    outline: none;
     opacity: 0.7;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
-    border-radius:5px;
+    border-radius: 5px;
     box-shadow: 0px 1px 10px 1px black;
 
 }
@@ -252,9 +254,9 @@ select option {
     -webkit-appearance: none;
     width: 40px;
     height: 40px;
-    background:white;
+    background: white;
     border-radius: 30%;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .valueDiv {
@@ -266,7 +268,7 @@ select option {
 
 
 small {
-    color:white;
+    color: white;
     font-size: 1.3rem;
     font-weight: 900;
     margin-right: 2%;
@@ -380,7 +382,7 @@ input[type=file] {
     border: none;
 }
 
-.greeting{
+.greeting {
     font-size: 3rem;
     text-align: center;
     margin-top: 20px;
@@ -391,7 +393,7 @@ input[type=file] {
     text-transform: uppercase;
 }
 
-.greeting__text{
+.greeting__text {
     font-size: 1.5rem;
     text-align: center;
     margin: 1.5rem 0rem 2rem 0rem;
@@ -399,17 +401,17 @@ input[type=file] {
     line-height: 2rem;
 }
 
-.image__Jpeg_Warning{
+.image__Jpeg_Warning {
     font-weight: 300;
     font-size: 1rem;
 }
 
-.avatar__select{
+.avatar__select {
     font-weight: 900;
     margin-bottom: 1rem;
 }
 
-.avatars{
+.avatars {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -433,8 +435,8 @@ input[type=file] {
     margin-top: 30px;
 }
 
-@media screen AND (max-width:768px) {
-    .greeting{
+@media screen AND (max-width: 768px) {
+    .greeting {
         line-height: 3rem;
     }
 
@@ -442,55 +444,56 @@ input[type=file] {
         grid-template-columns: 1fr 1fr;
     }
 
-    .greeting__text{
+    .greeting__text {
         margin-top: -2.5rem
     }
 
-    .firstLine{
+    .firstLine {
         grid-template-columns: 1fr;
     }
 
-    .firstName input{
+    .firstName input {
         width: 100%;
     }
 
-    .firstName, .lastName{
+    .firstName, .lastName {
         padding-bottom: 1rem;
     }
 
-    .secondLine{
+    .secondLine {
         grid-template-columns: 1fr;
     }
 
-    .age input, .email input, .location input{
+    .age input, .email input, .location input {
         width: 100%;
         margin-bottom: 1rem;
     }
 
-    .location{
-        padding-bottom: 0rem }
+    .location {
+        padding-bottom: 0rem
+    }
 
-    .email{
+    .email {
         padding-bottom: 0rem;
     }
 
-    .thirdLine{
+    .thirdLine {
         grid-template-columns: 1fr;
     }
 
-    .thirdLineLeft{
+    .thirdLineLeft {
         width: 100%;
     }
 
-    .petAttributes{
+    .petAttributes {
         margin-bottom: 1rem;
     }
 
-    .dropDown{
+    .dropDown {
         margin-bottom: 1rem;
     }
 
-    .submitButtonSquare{
+    .submitButtonSquare {
         font-size: 1.25rem;
         font-weight: 700;
         text-transform: uppercase;
