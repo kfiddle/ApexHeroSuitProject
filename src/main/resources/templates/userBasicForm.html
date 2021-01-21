@@ -50,9 +50,6 @@
                 <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
             </div>
         </div>
-    </form>
-
- <button onclick="SubForm()">testing submit</button>
 
 
 
@@ -87,18 +84,21 @@
 
         <div class="yearsSpentLine">
             <h2>Years you've spent at your current job: </h2>
-            <input placeholder="years" type="number"
+            <input placeholder="years" type="number" name="yearsAtCurrentJob"
                    max="99" required/>
         </div>
 
         <div class="reallyPersonalLine">
             <div class="inputContainer">
-                <input placeholder="Waist size in Inches" type="number" min="18" max="99" required/>
+                <input placeholder="Waist size in Inches" type="number" min="18" max="99" name="waist" required/>
             </div>
             <div class="inputContainer">
-                <input placeholder="Weights in Pounds" type="number" min="18" max="99" required/>
+                <input placeholder="Weights in Pounds" type="number" min="18" max="99" name="weight" required/>
             </div>
         </div>
+
+    <button onclick="SubForm()">testing submit</button>
+    </form>
 
         <div class="heightLine">
             <h2>Your Height in Feet and Inches:</h2>
@@ -111,7 +111,7 @@
         </div>
 
         <div class="dropDownDiv">
-            <select name="company" class="dropDown">
+            <select class="dropDown">
                 <option selected="selected" disabled="disabled">Have you ever experienced lower back pain?</option>
                 <option>Yes</option>
                 <option>No</option>
