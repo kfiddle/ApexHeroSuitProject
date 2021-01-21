@@ -33,7 +33,7 @@ for (let i = 0; i < bigSliders.length; i++) {
         let percent = (bigSliders[i].value / 15) * 100;
 
 
-        bigSliders[i].style.background = "linear-gradient(90deg, rgb(0,0,255)" + percent + "%, rgb(214,214,214)" + percent + "%)";
+        bigSliders[i].style.background = "linear-gradient(90deg, rgb(252,229,0)" + percent + "%, rgb(214,214,214)" + percent + "%)";
         console.log(bigSliders[i].value);
         bigDisplays[i].innerHTML = bigSliders[i].value + " " + display;
     }
@@ -60,7 +60,7 @@ for (let i = 0; i < smallSliders.length; i++) {
         let percent = (smallSliders[i].value / 10) * 100;
 
 
-        smallSliders[i].style.background = "linear-gradient(90deg, rgb(0,0,255)" + percent + "%, rgb(214,214,214)" + percent + "%)";
+        smallSliders[i].style.background = "linear-gradient(90deg, rgb(252,229,0)" + percent + "%, rgb(214,214,214)" + percent + "%)";
         console.log(smallSliders[i].value);
         smallDisplays[i].innerHTML = smallSliders[i].value + " " + display;
     };
