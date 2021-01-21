@@ -181,6 +181,7 @@ input[type="range"]::-moz-range-track {
 .multiLine {
     margin-top: 3%;
     margin-bottom: 3%;
+    text-align: center;
 }
 
 
@@ -253,6 +254,15 @@ select option {
     margin-left: 5rem;
 }
 
+.accordion {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 1rem;
+    background-color: dodgerblue;
+    text-align: center;
+    border-radius: 5px;
+}
+
 .rangeLabel {
     width: 100%;
 }
@@ -302,8 +312,8 @@ small {
 }
 
 .bodyPartTickDiv {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: none;
+    /*grid-template-columns: 1fr 3fr;*/
 }
 
 .bodySliderDiv {

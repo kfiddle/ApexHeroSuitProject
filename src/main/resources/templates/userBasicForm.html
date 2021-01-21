@@ -40,7 +40,7 @@
 <div class="container">
 
     <h1 id="greeting">HeroWear User Questionnaire</h1>
-    <h2 id="subGreeting">Please enter your information in the fields below</h2>
+    <h2 id="subGreeting">Please enter the requested information in the fields below</h2>
 
     <form id="myForm">
 
@@ -52,7 +52,6 @@
                 <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
             </div>
         </div>
-
 
 
         <div class="secondLine">
@@ -102,308 +101,316 @@
 
     </form>
 
-        <div class="heightLine">
-            <h2 class="question">Your Height in Feet and Inches:</h2>
-            <div>
-                <input type="number" placeholder="feet">
+    <div class="heightLine">
+        <h2 class="question">Your Height in Feet and Inches:</h2>
+        <div>
+            <input type="number" placeholder="feet">
+        </div>
+        <div>
+            <input type="number" placeholder="inches">
+        </div>
+    </div>
+
+    <div class="dropDownDiv">
+        <select class="dropDown">
+            <option selected="selected" disabled="disabled">Have you ever experienced lower back pain?</option>
+            <option>Yes</option>
+            <option>No</option>
+
+        </select>
+    </div>
+
+
+    <div class="thirdLine">
+        <h2 class="question">Please rate your overall effort at work.</h2>
+    </div>
+
+    <div class="tickDiv">
+        <small>no exertion</small>
+        <small>1</small>
+        <label class="rangeLabel">
+            <input type=range min=1 max=15 value=1 step=1 class="big slider">
+        </label>
+        <small>15</small>
+        <small>maximal exertion</small>
+    </div>
+    <div class="valueDiv">
+        <small class="bigValueDisplay"></small>
+    </div>
+
+
+    <div class="thirdLine">
+        <img id="omniResScale" src="images/omni-res-option2.jpg" alt="">
+    </div>
+
+
+    <div class="thirdLine">
+        <h2 class="question">Using the scale above, how hard do you feel your muscles are working for a typical lift?
+        </h2>
+    </div>
+
+
+    <div class="tickDiv">
+        <small>Extremely easy</small>
+        <small>0</small>
+        <label class="rangeLabel">
+            <input type=range min=0 max=10 value=1 step=1 class="small slider">
+        </label>
+        <small>10</small>
+        <small>Extremely hard</small>
+    </div>
+    <div class="valueDiv">
+        <small class="smallValueDisplay"></small>
+    </div>
+
+
+    <div class="thirdLine">
+        <h2 class="question">Using the scale above, how hard do you feel your muscles are working for your
+            <i>heaviest</i> lift?
+        </h2>
+    </div>
+
+    <div class="tickDiv">
+        <small>Extremely easy</small>
+        <small>0</small>
+        <label class="rangeLabel">
+            <input type=range min=0 max=10 value=1 step=1 class="small slider">
+        </label>
+        <small>10</small>
+        <small>Extremely hard</small>
+    </div>
+    <div class="valueDiv">
+        <small class="smallValueDisplay"></small>
+    </div>
+
+
+    <div class="thirdLine">
+        <img id="bodyMap" src="images/frontAndBack.jpg" alt="">
+    </div>
+
+    <div class="bodyPartSectionDiv">
+        <div class="multiLine">
+            <h2 class="question">Please click below to rate your level of work-related discomfort for the body part
+                indicated:</h2>
+        </div>
+
+        <button class="accordion">
+            <h1>Right Shoulder</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
             </div>
-            <div>
-                <input type="number" placeholder="inches">
+
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
             </div>
         </div>
 
-        <div class="dropDownDiv">
-            <select class="dropDown">
-                <option selected="selected" disabled="disabled">Have you ever experienced lower back pain?</option>
-                <option>Yes</option>
-                <option>No</option>
 
-            </select>
-        </div>
+        <button class="accordion">
+            <h1>Left Shoulder</h1>
+        </button>
 
-
-
-        <div class="thirdLine">
-            <h2 class="question">Please rate your overall effort at work.</h2>
-        </div>
-
-        <div class="tickDiv">
-            <small>no exertion</small>
-            <small>1</small>
-            <label class="rangeLabel">
-                <input type=range min=1 max=15 value=1 step=1 class="big slider">
-            </label>
-            <small>15</small>
-            <small>maximal exertion</small>
-        </div>
-        <div class="valueDiv">
-            <small class="bigValueDisplay"></small>
-        </div>
-
-
-
-
-
-        <div class="thirdLine">
-            <img id="omniResScale" src="images/omni-res-option2.jpg" alt="">
-        </div>
-
-
-        <div class="thirdLine">
-            <h2 class="question">Using the scale above, how hard do you feel your muscles are working for a typical lift?
-            </h2>
-        </div>
-
-
-        <div class="tickDiv">
-            <small>Extremely easy</small>
-            <small>0</small>
-            <label class="rangeLabel">
-                <input type=range min=0 max=10 value=1 step=1 class="small slider">
-            </label>
-            <small>10</small>
-            <small>Extremely hard</small>
-        </div>
-        <div class="valueDiv">
-            <small class="smallValueDisplay"></small>
-        </div>
-
-
-
-
-        <div class="thirdLine">
-            <h2 class="question">Using the scale above, how hard do you feel your muscles are working for your <i>heaviest</i> lift?
-            </h2>
-        </div>
-
-        <div class="tickDiv">
-            <small>Extremely easy</small>
-            <small>0</small>
-            <label class="rangeLabel">
-                <input type=range min=0 max=10 value=1 step=1 class="small slider">
-            </label>
-            <small>10</small>
-            <small>Extremely hard</small>
-        </div>
-        <div class="valueDiv">
-            <small class="smallValueDisplay"></small>
-        </div>
-
-
-
-        <div class="thirdLine">
-            <img id="bodyMap" src="images/frontAndBack.jpg" alt="">
-        </div>
-
-        <div class="bodyPartSectionDiv">
-            <div class="multiLine">
-                <h2 class="question">Please rate your level of work-related discomfort for the body part indicated:</h2>
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
             </div>
 
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+        </div>
 
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Right Shoulder</h3>
 
-                <div class="tickDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
+        <button class="accordion">
+            <h1>Upper Back</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
+            </div>
+
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+        </div>
+
+
+        <button class="accordion">
+            <h1>Lower Back</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
+            </div>
+
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+        </div>
+
+        <button class="accordion">
+            <h1>Right Hip</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
+            </div>
+
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+        </div>
+
+        <button class="accordion">
+            <h1>Left Hip</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
+            </div>
+
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+        </div>
+
+
+        <button class="accordion">
+            <h1>Right Thigh</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
+            </div>
+
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+        </div>
+
+        <button class="accordion">
+            <h1>Left Thigh</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
+            </div>
+
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+        </div>
+
+        <button class="accordion">
+            <h1>Right Knee</h1>
+        </button>
+
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
             </div>
             <div class="valueDiv">
                 <small class="bodyPainDisplay"></small>
             </div>
+        </div>
 
+        <button class="accordion">
+            <h1>Left Knee</h1>
+        </button>
 
-
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Left Shoulder</h3>
-
-
-                <div class="tickDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
+        <div class="bodyPartTickDiv">
+            <div class="tickDiv">
+                <small>No pain</small>
+                <small>0</small>
+                <label class="rangeLabel">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                </label>
+                <small>10</small>
+                <small>Worst possible pain</small>
             </div>
             <div class="valueDiv">
                 <small class="bodyPainDisplay"></small>
             </div>
-
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Upper Back</h3>
-
-
-                <div class="tickDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Lower Back</h3>
-
-                <div class="tickDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Right Hip</h3>
-
-
-                <div class="bodySliderDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Left Hip</h3>
-
-
-                <div class="bodySliderDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Right Thigh</h3>
-
-                <div class="bodySliderDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Left Thigh</h3>
-
-
-                <div class="tickDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Right Knee</h3>
-
-
-                <div class="tickDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-            <div class="bodyPartTickDiv">
-                <h3 class="bodyPart">Left Knee</h3>
-
-                <div class="tickDiv">
-                    <small>No pain</small>
-                    <small>0</small>
-                    <label class="rangeLabel">
-                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
-                    </label>
-                    <small>10</small>
-                    <small>Worst possible pain</small>
-                </div>
-            </div>
-            <div class="valueDiv">
-                <small class="bodyPainDisplay"></small>
-            </div>
-
-
-
         </div>
 
 
+    </div>
 
-<!--        <div class="submit">-->
 
-<!--            <button class="submitButtonSquare">Submit Form</button>-->
-<!--        </div>-->
+    <!--        <div class="submit">-->
+
+    <!--            <button class="submitButtonSquare">Submit Form</button>-->
+    <!--        </div>-->
     </form>
 </div>
 
 <script src="js/sliders.js"></script>
+<script src="js/accordions.js"></script>
+
 </body>
-
-
 
 
 </html>
