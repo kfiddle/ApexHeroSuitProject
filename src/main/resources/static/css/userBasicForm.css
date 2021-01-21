@@ -98,8 +98,9 @@ input[type="range"]::-moz-range-track {
 }
 
 .secondLine {
+    width: 100%;
     display: grid;
-    align-items: center;
+    align-content: center;
     margin: 1rem;
 }
 
@@ -263,6 +264,12 @@ select option {
     border-radius: 5px;
 }
 
+.accordion h1:hover {
+    color: #FCE500;
+
+}
+
+
 .rangeLabel {
     width: 100%;
 }
@@ -337,10 +344,6 @@ small {
 
 #bodyMap {
     width: 80%;
-}
-
-.bodyPartSectionDiv {
-    margin-bottom: 7%;
 }
 
 .petAttributes {
@@ -470,6 +473,12 @@ input[type=file] {
     transition: all 0.5s;
     display: inline-block;
     margin-top: 30px;
+    border-radius: 5px;
+}
+
+.submitButtonSquare:hover {
+    color: #FCE500;
+
 }
 
 @media screen AND (max-width: 768px) {
