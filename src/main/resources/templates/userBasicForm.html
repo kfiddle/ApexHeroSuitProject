@@ -117,6 +117,8 @@
             </select>
         </div>
 
+
+
         <div class="thirdLine">
             <h2>Please rate your overall effort at work.</h2>
         </div>
@@ -125,13 +127,13 @@
             <small>no exertion</small>
             <small>1</small>
             <label class="rangeLabel">
-                <input type=range min=1 max=15 value=1 step=1 class="bigSlider">
+                <input type=range min=1 max=15 value=1 step=1 class="big slider">
             </label>
             <small>15</small>
             <small>maximal exertion</small>
         </div>
         <div class="valueDiv">
-            <small class="valueDisplay"></small>
+            <small class="bigValueDisplay"></small>
         </div>
 
 
@@ -150,25 +152,19 @@
 
 
         <div class="tickDiv">
-
-            <small>no exertion</small>
-
-            <input type=range min=0 max=10 value=1 step=1 class="recommendTick">
-            <datalist id=tickMarks2>
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </datalist>
-            <small>extremely hard</small>
+            <small>Extremely easy</small>
+            <small>0</small>
+            <label class="rangeLabel">
+                <input type=range min=0 max=10 value=1 step=1 class="small slider">
+            </label>
+            <small>10</small>
+            <small>Extremely hard</small>
         </div>
+        <div class="valueDiv">
+            <small class="smallValueDisplay"></small>
+        </div>
+
+
 
 
         <div class="thirdLine">
@@ -176,26 +172,17 @@
             </h2>
         </div>
 
-
         <div class="tickDiv">
-
-            <small>not very hard</small>
-
-            <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-            <datalist id=tickMarks3>
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </datalist>
-            <small>extremely hard</small>
+            <small>Extremely easy</small>
+            <small>0</small>
+            <label class="rangeLabel">
+                <input type=range min=0 max=10 value=1 step=1 class="small slider">
+            </label>
+            <small>10</small>
+            <small>Extremely hard</small>
+        </div>
+        <div class="valueDiv">
+            <small class="smallValueDisplay"></small>
         </div>
 
 
@@ -213,222 +200,191 @@
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Right Shoulder</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks5>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+                <div class="tickDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
             </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+
+
+
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Left Shoulder</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks6>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+
+                <div class="tickDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
             </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Upper Back</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks7>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+
+                <div class="tickDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
             </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+
+
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Lower Back</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks8>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+                <div class="tickDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
             </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+
+
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Right Hip</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks9>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+
+                <div class="bodySliderDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
+            </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
             </div>
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Left Hip</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks10>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+
+                <div class="bodySliderDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
             </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+
+
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Right Thigh</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks11>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+                <div class="bodySliderDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
+            </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
             </div>
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Left Thigh</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks12>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+
+                <div class="tickDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
+            </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
             </div>
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Right Knee</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks13>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+
+                <div class="tickDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
+            </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
             </div>
 
             <div class="bodyPartTickDiv">
                 <h3 class="bodyPart">Left Knee</h3>
-                <div class="innerScaleDiv">
-                    <small>no pain</small>
-                    <input type=range min=0 max=10 value=1 step=1 list=tickMarks class="recommendTick">
-                    <datalist id=tickMarks14>
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                    <small>worst possible pain</small>
+
+                <div class="tickDiv">
+                    <small>No pain</small>
+                    <small>0</small>
+                    <label class="rangeLabel">
+                        <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    </label>
+                    <small>10</small>
+                    <small>Worst possible pain</small>
                 </div>
+            </div>
+            <div class="valueDiv">
+                <small class="bodyPainDisplay"></small>
+            </div>
+
+
             </div>
         </div>
 
