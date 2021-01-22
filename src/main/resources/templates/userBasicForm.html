@@ -15,21 +15,7 @@
             crossorigin="anonymous">
 
     </script>
-    <script>
-        function SubForm() {
-            $.ajax({
-                url: 'https://api.apispreadsheets.com/data/6917/',
-                type: 'post',
-                data: $("#myForm").serializeArray(),
-                success: function () {
-                    alert("Thank You for Submitting!)")
-                },
-                error: function () {
-                    alert("There was an error :(")
-                }
-            });
-        }
-    </script>
+
 
 </head>
 
@@ -68,10 +54,10 @@
 
         <div class="thirdLine">
             <div class="age">
-                <input placeholder="Age" type="number" id="age" name="age" min="18" max="99" required/>
+                <input placeholder="Age" type="number" id="age" name="age"/>
             </div>
             <div class="email">
-                <input placeholder="Email" type="email" id="email" name="email" required/>
+                <input placeholder="Email" type="email" id="email" name="email"/>
             </div>
             <div class="dropDownDiv">
                 <select name="gender" class="dropDown">
@@ -86,20 +72,20 @@
         <div class="yearsSpentLine">
             <h2 class="question">Number of years you've spent at your current job: </h2>
             <input placeholder="years" type="number" name="yearsAtCurrentJob"
-                   max="99" required/>
+                   max="99"/>
         </div>
 
         <div class="reallyPersonalLine">
             <div class="inputContainer">
-                <input placeholder="Waist size in Inches" type="number" min="18" max="99" name="waist" required/>
+                <input placeholder="Waist size in Inches" type="number" min="10" max="99" name="waist"/>
             </div>
             <div class="inputContainer">
-                <input placeholder="Weights in Pounds" type="number" min="18" max="99" name="weight" required/>
+                <input placeholder="Weight in Pounds" type="number" name="weight"/>
             </div>
         </div>
 
 
-    </form>
+
 
     <div class="heightLine">
         <h2 class="question">Your Height in Feet and Inches:</h2>
@@ -112,7 +98,7 @@
     </div>
 
     <div class="dropDownDiv">
-        <select class="dropDown">
+        <select class="dropDown" name="lowerBackPain">
             <option selected="selected" disabled="disabled">Have you ever experienced lower back pain?</option>
             <option>Yes</option>
             <option>No</option>
@@ -125,11 +111,13 @@
         <h2 class="question">Please rate your overall effort at work.</h2>
     </div>
 
+
+
     <div class="tickDiv">
         <small>no exertion</small>
         <small>1</small>
         <label class="rangeLabel">
-            <input type=range min=1 max=15 value=1 step=1 class="big slider" name="overallEffort">
+            <input type=range min=1 max=15 value=1 step=1 class="big slider" id="slider1" name="overallEffort">
         </label>
         <small>15</small>
         <small>maximal exertion</small>
@@ -137,6 +125,8 @@
     <div class="valueDiv">
         <small class="bigValueDisplay"></small>
     </div>
+
+
 
 
     <div class="thirdLine">
@@ -154,7 +144,7 @@
         <small>Extremely easy</small>
         <small>0</small>
         <label class="rangeLabel">
-            <input type=range min=0 max=10 value=1 step=1 class="small slider">
+            <input type=range min=0 max=10 value=1 step=1 class="small slider" name="typicalLiftEffort">
         </label>
         <small>10</small>
         <small>Extremely hard</small>
@@ -174,7 +164,7 @@
         <small>Extremely easy</small>
         <small>0</small>
         <label class="rangeLabel">
-            <input type=range min=0 max=10 value=1 step=1 class="small slider">
+            <input type=range min=0 max=10 value=1 step=1 class="small slider" name="heaviestLiftEffort">
         </label>
         <small>10</small>
         <small>Extremely hard</small>
@@ -194,7 +184,7 @@
                 indicated:</h2>
         </div>
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Right Shoulder</h1>
         </button>
 
@@ -203,7 +193,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider " name="rightShoulder">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -215,7 +205,7 @@
         </div>
 
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Left Shoulder</h1>
         </button>
 
@@ -224,7 +214,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="leftShoulder">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -236,7 +226,7 @@
         </div>
 
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Upper Back</h1>
         </button>
 
@@ -245,7 +235,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="upperBack">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -257,7 +247,7 @@
         </div>
 
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Lower Back</h1>
         </button>
 
@@ -266,7 +256,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="lowerBack">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -277,7 +267,7 @@
             </div>
         </div>
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Right Hip</h1>
         </button>
 
@@ -286,7 +276,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="rightHip">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -297,7 +287,7 @@
             </div>
         </div>
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Left Hip</h1>
         </button>
 
@@ -306,7 +296,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="leftHip">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -318,7 +308,7 @@
         </div>
 
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Right Thigh</h1>
         </button>
 
@@ -327,7 +317,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="rightThigh">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -338,7 +328,7 @@
             </div>
         </div>
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Left Thigh</h1>
         </button>
 
@@ -347,7 +337,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="leftThigh">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -358,7 +348,7 @@
             </div>
         </div>
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Right Knee</h1>
         </button>
 
@@ -367,7 +357,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="rightKnee">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -377,7 +367,7 @@
             </div>
         </div>
 
-        <button class="accordion">
+        <button type="button" class="accordion">
             <h1>Left Knee</h1>
         </button>
 
@@ -386,7 +376,7 @@
                 <small>No pain</small>
                 <small>0</small>
                 <label class="rangeLabel">
-                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider ">
+                    <input type=range min=0 max=10 value=1 step=1 class="bodySlider slider" name="leftKnee">
                 </label>
                 <small>10</small>
                 <small>Worst possible pain</small>
@@ -397,17 +387,17 @@
         </div>
 
     </div>
-
+    </form>
 
             <div class="submit">
                 <button class="submitButtonSquare" onclick="SubForm()">Submit Form</button>
             </div>
-    </form>
+
 </div>
 
 <script src="js/sliders.js"></script>
 <script src="js/accordions.js"></script>
-<!--<script src="js/dropDownValues.js"></script>-->
+<script src="js/submitValues.js"></script>
 
 
 </body>
