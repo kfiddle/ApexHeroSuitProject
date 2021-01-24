@@ -10,6 +10,8 @@ const gender = document.getElementById("gender");
 const yearsAtCurrentJob = document.getElementById("yearsAtCurrentJob");
 const weight = document.getElementById("weight");
 const waist = document.getElementById("waist");
+const feet = document.getElementById("feet");
+const inches = document.getElementById("inches");
 
 const lowerBackPain = document.getElementById("lowerBackPain");
 const overallEffort = document.getElementById("overallEffort");
@@ -28,26 +30,9 @@ const rightKnee = document.getElementById("rightKnee");
 const leftKnee = document.getElementById("leftKnee");
 
 
-
-
-// function SubForm() {
-//     $.ajax({
-//         url: 'https://api.apispreadsheets.com/data/6917/',
-//
-//         type: 'POST',
-//         data: $("#myForm").serializeArray(),
-//
-//         success: function () {
-//             alert("Thank You for Submitting!)")
-//         },
-//         error: function () {
-//             alert("There was an error :(")
-//         }
-//     });
-//     console.log(slider1.value)
-// }
-
 function subWithFetch() {
+
+    let totalInches = parseInt(feet.value)*12 + parseInt(inches.value);
 
     let formData = {
         "Timestamp": currentTime,
@@ -59,6 +44,7 @@ function subWithFetch() {
         "yearsAtCurrentJob": yearsAtCurrentJob.value,
         "weight": weight.value,
         "waist": waist.value,
+        "height": totalInches,
         "lowerBackPain": lowerBackPain.value,
         "overallEffort": overallEffort.value,
         "typicalLeftEffort": typicalLiftEffort.value,
@@ -87,8 +73,23 @@ function subWithFetch() {
             alert("there was an error.")
         }
     })
-    console.log(gender.value);
-    console.log(firstName.value);
+}
 
 
-};
+
+// function SubForm() {
+//     $.ajax({
+//         url: 'https://api.apispreadsheets.com/data/6917/',
+//
+//         type: 'POST',
+//         data: $("#myForm").serializeArray(),
+//
+//         success: function () {
+//             alert("Thank You for Submitting!)")
+//         },
+//         error: function () {
+//             alert("There was an error :(")
+//         }
+//     });
+//     console.log(slider1.value)
+// }
