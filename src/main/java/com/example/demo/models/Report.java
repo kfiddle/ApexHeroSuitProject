@@ -91,6 +91,7 @@ public class Report {
         rightThighDiscomfort = rt;
         leftKneeDiscomfort = lk;
         rightKneeDiscomfort = rk;
+        timestamp = Instant.now();
     }
 
     public Report(int rs, int ls, int ub, int lb, int rh, int lh, int rt, int lt, int rk, int lk,
@@ -100,10 +101,9 @@ public class Report {
                   int tcumb, int ifc, int ntla, int hbu, int iltcw, int ifs, int cmn, int utn,
                   int wud, int etpo, int etto, int rwf, int iwp, int plbi, int rad, int aost,
                   String wt, int dtgu,
-                  String longTermEffects, String
+                  String longTermEffects, String whatDoYouLikeAboutIt, String whatDoYouHateAboutIt,
+                          String additionalNotes) {
 
-
-                  ) {
         rightShoulderDiscomfort = rs;
         leftShoulderDiscomfort = ls;
         upperBackDiscomfort = ub;
@@ -157,9 +157,10 @@ public class Report {
         whichTasks = wt;
         daysToGetUsedToIt = dtgu;
         this.longTermEffects = longTermEffects;
-        private String whatDoYouLikeAboutIt;
-        private String whatDoYouHateAboutIt;
-        private String additionalNotes;
+        this.whatDoYouLikeAboutIt = whatDoYouLikeAboutIt;
+        this.whatDoYouHateAboutIt = whatDoYouHateAboutIt;
+        this.additionalNotes = additionalNotes;
+        timestamp = Instant.now();
 
 
 

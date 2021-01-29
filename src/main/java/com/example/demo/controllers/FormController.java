@@ -8,10 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class FormController {
 
-    @GetMapping("/testing-form")
-    public String aPageForFormTesting() {
-        return "testingForm";
-    }
 
     @GetMapping("/user-form")
     public String userRepeatEntryForm() {
@@ -23,6 +19,10 @@ public class FormController {
         return "userBasicForm";
     }
 
+    @GetMapping("/submission-successful")
+    public String displayThankYouPage() {
+        return "submittedPage";
+    }
 
 
 }
