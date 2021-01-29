@@ -48,8 +48,12 @@ public class Company {
         this.name = name;
     }
 
-    public void addEmployees(Employee...newEmployeesToAdd){
+    public void addEmployees(Employee...newEmployeesToAdd) {
         employees.addAll(Arrays.asList(newEmployeesToAdd));
+    }
+
+    public void addEmployee(Employee employee) {
+        employees.add(employee);
     }
 
 

@@ -13,6 +13,7 @@ public class Employee {
 
     private String firstName;
     private String lastName;
+    private String companyName;
 
     @ManyToOne
     private Company company;
@@ -48,8 +49,15 @@ public class Employee {
         return lastName;
     }
 
+    public String getCompanyName() {
+        return companyName;
+    }
     public Company getCompany() {
         return company;
+    }
+
+    public String companyForDisplay() {
+        return company.getName();
     }
 
     public JobSite getJobSite() {
@@ -102,6 +110,12 @@ public class Employee {
     public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public Employee(String firstName, String lastName, String companyName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.companyName = companyName;
     }
 
     public Employee(String firstName, String lastName, Company company) {

@@ -1,15 +1,13 @@
 package com.example.demo.controllers;
 
 
+import com.example.demo.models.Company;
 import com.example.demo.models.Employee;
 import com.example.demo.repositories.CompanyRepository;
 import com.example.demo.repositories.EmployeeRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -30,8 +28,8 @@ public class EmployeeController {
 
     @PostMapping("/add-employees")
     public void addNewEmployees(@RequestBody Employee employee) {
-        employeeRepo.save(employee);
+        Company companyToGetEmployee = companyRepo.findByName(employee.getCompanyName());
+        Employee employeeToAdd = new Employee(employee.getFirstName(), employee.getLastName(), companyToGetEmployee);
+        employeeRepo.save(employeeToAdd);
     }
-
-
 }

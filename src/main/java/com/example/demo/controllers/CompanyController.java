@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.models.Company;
+import com.example.demo.models.Employee;
 import com.example.demo.repositories.CompanyRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,12 +34,22 @@ public class CompanyController {
         companyRepo.save(company);
     }
 
+    @RequestMapping("/companies/{companyName}")
+    public String displayACompanyName(Model model, @PathVariable String companyName) {
+        Collection<Employee> employeesOfOneCompany = companyRepo.findByName(companyName).getEmployees();
+        model.addAttribute("employeesOfSingleCompany", employeesOfOneCompany);
+        Company companyToDisplay = companyRepo.findByName(companyName);
+        model.addAttribute("companyName", companyToDisplay.getName());
+        return "companyPage";
+    }
+
 
     @RequestMapping("/{companyName}/employee-entry-form")
     public String displayFormPageForAddingEmployees(Model model, @PathVariable String companyName) {
         model.addAttribute("company", companyRepo.findByName(companyName));
         return "companyEmployeeEntryForm";
     }
+
 }
 
 

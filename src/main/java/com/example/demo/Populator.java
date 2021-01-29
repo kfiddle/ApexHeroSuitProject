@@ -16,8 +16,10 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Company company007 = new Company("cool peeps");
+        Company company007 = new Company("coolpeeps");
+        Company mi6 = new Company("mi6");
         companyRepo.save(company007);
+        companyRepo.save(mi6);
 
 
     }

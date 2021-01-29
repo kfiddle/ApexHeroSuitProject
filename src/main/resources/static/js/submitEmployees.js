@@ -1,3 +1,7 @@
+const companyNameElement = document.getElementById("companyName");
+const companyName = companyNameElement.innerText;
+
+
 const submitNewEmployees = () => {
 
     let firstNames = Array.from(document.querySelectorAll(".firstName"));
@@ -6,7 +10,8 @@ const submitNewEmployees = () => {
     for (let i = 0; i < firstNames.length; i++) {
         let formData = {
             firstName: firstNames[i].value,
-            lastName: lastNames[i].value
+            lastName: lastNames[i].value,
+            companyName: companyName
         }
 
         $.ajax({
@@ -19,6 +24,4 @@ const submitNewEmployees = () => {
         )
     }
     window.location = "/all-employees";
-
-
 }
