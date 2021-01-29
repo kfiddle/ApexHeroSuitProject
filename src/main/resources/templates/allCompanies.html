@@ -4,16 +4,23 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/administrative.css">
     <title>All Companies</title>
 </head>
 <body>
+<header>
+    <img src="/images/herowearLogo.jpg" alt="">
+</header>
 
-<h1>Our Partnering Companies....</h1>
+<div class="container">
+
+    <h1 id="greeting">Our Partnering Companies....</h1>
 
 <ul th:each= "company:${allCompanies}">
     <li th:text="${company.name}"></li>
 </ul>
 
+</div>
 
 </body>
 </html>
