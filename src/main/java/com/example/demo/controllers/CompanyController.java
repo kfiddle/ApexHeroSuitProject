@@ -31,7 +31,8 @@ public class CompanyController {
 
     @PostMapping("/add-companies")
     public void addCompaniesToRepository(@RequestBody Company company) {
-        companyRepo.save(company);
+        Company companyToAdd = new Company(company.getName());
+        companyRepo.save(companyToAdd);
     }
 
     @RequestMapping("/companies/{companyName}")

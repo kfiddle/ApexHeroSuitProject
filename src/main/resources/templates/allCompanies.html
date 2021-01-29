@@ -16,9 +16,12 @@
 
     <h1 id="greeting">Our Partnering Companies....</h1>
 
-<ul th:each= "company:${allCompanies}">
-    <li th:text="${company.name}"></li>
-</ul>
+    <ul th:each="company:${allCompanies}">
+        <li th:text="${company.name}"></li>
+        <li th:text="${company.browserName}"></li>
+
+
+    </ul>
 
 </div>
 
