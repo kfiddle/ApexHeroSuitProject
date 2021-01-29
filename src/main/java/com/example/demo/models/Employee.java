@@ -99,6 +99,11 @@ public class Employee {
     public Employee() {
     }
 
+    public Employee(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public Employee(String firstName, String lastName, Company company) {
         this.firstName = firstName;
         this.lastName = lastName;

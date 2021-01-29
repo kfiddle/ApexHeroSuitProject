@@ -1,0 +1,16 @@
+
+
+
+body {
+    background-color: lightgray;
+}
+
+
+.firstLine {
+    display:grid;
+    grid-template-columns: 10% 10%;
+}
+
+.input {
+    padding-right: 7%;
+}

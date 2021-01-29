@@ -4,10 +4,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/userBasicForm.css">
+    <!--    <link rel="stylesheet" href="css/main.css">-->
+    <link rel="stylesheet" href="/css/employeeEntry.css">
+    <!--    <link rel="stylesheet" href="css/userBasicForm.css">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
     <title>Employees Entry Form</title>
 </head>
@@ -20,29 +23,32 @@
 <div class="container">
 
     <h1 id="greeting">HeroWear Employee Entry</h1>
-    <h2 id="companyName" th:text="${companyName}"></h2>
+    <h2 id="companyName" th:text="${company.name}"></h2>
     <h2 id="subGreeting">Please enter the First and Last names of your Employees below</h2>
 
-    <form action="add-employees">
+<div id="employeeFormDiv">
+<!--    <div class="firstLine">-->
+<!--        <div class="firstName">-->
+<!--            <input placeholder="First name *" type="text" id="firstName" name="firstName" required/><br>-->
+<!--        </div>-->
+<!--        <div class="lastName">-->
+<!--            <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
 
-        <div class="firstLine">
-            <div class="firstName">
-                <input placeholder="First name *" type="text" id="firstName" name="firstName" required/><br>
-            </div>
-            <div class="lastName">
-                <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
-            </div>
-        </div>
+    <button onclick="addEmployeeForm()">Add Employee Form</button>
 
 
+    <button onclick="submitNewEmployees()">Submit Form</button>
 
-
-
-<button type="submit">Submit Form</button>
-
-    </form>
 
 </div>
+
+
+<script src="/js/addEmployeeForm.js"></script>
+<script src="/js/submitEmployees.js"></script>
+
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 const submitCompanies = () => {
-    let companies = Array.from(document.querySelectorAll(".companyInput"));
+    let companies = Array.from(document.querySelectorAll(".input"));
 
     for (let i = 0; i < companies.length; i++) {
         let formData = {
@@ -16,8 +16,6 @@ const submitCompanies = () => {
         )
     }
     window.location = "/companies";
-
-
 
 }
 
