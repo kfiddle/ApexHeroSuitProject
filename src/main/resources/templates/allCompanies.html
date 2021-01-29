@@ -16,11 +16,8 @@
 
     <h1 id="greeting">Our Partnering Companies....</h1>
 
-    <ul th:each="company:${allCompanies}">
-        <li th:text="${company.name}"></li>
-        <li th:text="${company.browserName}"></li>
-
-
+    <ul>
+        <li th:each="company:${allCompanies}"><a th:href="@{'/companies/' + ${company.browserName}}" th:text="${company.name}"></a></li>
     </ul>
 
 </div>

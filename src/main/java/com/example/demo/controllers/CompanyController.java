@@ -35,19 +35,19 @@ public class CompanyController {
         companyRepo.save(companyToAdd);
     }
 
-    @RequestMapping("/companies/{companyName}")
-    public String displayACompanyName(Model model, @PathVariable String companyName) {
-        Collection<Employee> employeesOfOneCompany = companyRepo.findByName(companyName).getEmployees();
+    @RequestMapping("/companies/{companyInBrowser}")
+    public String displayACompanyName(Model model, @PathVariable String companyInBrowser) {
+        Collection<Employee> employeesOfOneCompany = companyRepo.findByBrowserName(companyInBrowser).getEmployees();
         model.addAttribute("employeesOfSingleCompany", employeesOfOneCompany);
-        Company companyToDisplay = companyRepo.findByName(companyName);
+        Company companyToDisplay = companyRepo.findByBrowserName(companyInBrowser);
         model.addAttribute("companyName", companyToDisplay.getName());
         return "companyPage";
     }
 
 
-    @RequestMapping("/{companyName}/employee-entry-form")
-    public String displayFormPageForAddingEmployees(Model model, @PathVariable String companyName) {
-        model.addAttribute("company", companyRepo.findByName(companyName));
+    @RequestMapping("/{companyNameInBrowser}/employee-entry-form")
+    public String displayFormPageForAddingEmployees(Model model, @PathVariable String companyNameInBrowser) {
+        model.addAttribute("company", companyRepo.findByBrowserName(companyNameInBrowser));
         return "companyEmployeeEntryForm";
     }
 
