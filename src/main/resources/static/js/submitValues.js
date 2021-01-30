@@ -4,7 +4,7 @@ let currentTime = new Date();
 
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
-const company = document.getElementById("company");
+const company = document.getElementById("companyHeading");
 const email = document.getElementById("email");
 const gender = document.getElementById("gender");
 const yearsAtCurrentJob = document.getElementById("yearsAtCurrentJob");
@@ -38,7 +38,9 @@ function subWithFetch() {
         "Timestamp": currentTime,
         "firstName": firstName.value,
         "lastName": lastName.value,
-        "company": company.value,
+
+        "company": company.innerText,
+
         "email": email.value,
         "gender": gender.value,
         "yearsAtCurrentJob": yearsAtCurrentJob.value,
@@ -74,7 +76,8 @@ function subWithFetch() {
         }
     })
 
-    let formDataForJava = {
+    let formDataForJavaEmployee = {
+
 
 
 

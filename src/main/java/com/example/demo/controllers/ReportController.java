@@ -7,6 +7,7 @@ import com.example.demo.repositories.CompanyRepository;
 import com.example.demo.repositories.EmployeeRepository;
 import com.example.demo.repositories.ReportRepository;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,8 +32,11 @@ public class ReportController {
         return "userInputRepeatForm";
     }
 
-    @GetMapping("/user-form-basic")
-    public String basicUserEntryForm() {
+    @GetMapping("/{companyNameInBrowser}/{id}/user-form-basic")
+    public String basicUserEntryForm(Model model, @PathVariable Long id) {
+        if (companyRepo.findById(id).isPresent()){
+            model.addAttribute("company", companyRepo.findById(id).get());
+        }
         return "userBasicForm";
     }
 

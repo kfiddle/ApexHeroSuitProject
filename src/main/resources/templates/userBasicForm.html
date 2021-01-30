@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/userBasicForm.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/userBasicForm.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>User Questionnaire</title>
@@ -25,7 +25,8 @@
 </header>
 <div class="container">
 
-    <h1 id="greeting">HeroWear User Questionnaire</h1>
+    <h1 id="greeting">Herowear User Questionnaire for</h1>
+    <h2 id="companyHeading" th:text="${company.name}"></h2>
     <h2 id="subGreeting">Please enter the requested information in the fields below</h2>
 
     <form id="myForm">
@@ -392,9 +393,9 @@
 
 </div>
 
-<script src="js/sliders.js"></script>
-<script src="js/accordions.js"></script>
-<script src="js/submitValues.js"></script>
+<script src="/js/sliders.js"></script>
+<script src="/js/accordions.js"></script>
+<script src="/js/submitValues.js"></script>
 
 
 </body>

@@ -20,6 +20,7 @@ public class Report {
 
     private String firstName;
     private String lastName;
+    private String company;
 
     private int rightShoulderDiscomfort;
     private int leftShoulderDiscomfort;
@@ -187,6 +188,10 @@ public class Report {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getCompany() {
+        return company;
     }
 
     public int getRightShoulderDiscomfort() {
