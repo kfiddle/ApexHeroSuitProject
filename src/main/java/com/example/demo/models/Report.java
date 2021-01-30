@@ -18,6 +18,9 @@ public class Report {
     @ManyToOne
     private Employee employee;
 
+    private String firstName;
+    private String lastName;
+
     private int rightShoulderDiscomfort;
     private int leftShoulderDiscomfort;
     private int upperBackDiscomfort;
@@ -80,17 +83,18 @@ public class Report {
     public Report() {
     }
 
-    public Report(int rs, int ls, int ub, int lb, int rh, int lh, int rt, int lt, int rk, int lk) {
+    public Report(Employee employee, int rs, int ls, int ub, int lb, int rh, int lh, int rt, int lt, int rk, int lk) {
+        this.employee = employee;
         rightShoulderDiscomfort = rs;
         leftShoulderDiscomfort = ls;
         upperBackDiscomfort = ub;
         lowerBackDiscomfort = lb;
         rightHipDiscomfort = rh;
         leftHipDiscomfort = lh;
-        leftThighDiscomfort = lt;
         rightThighDiscomfort = rt;
-        leftKneeDiscomfort = lk;
+        leftThighDiscomfort = lt;
         rightKneeDiscomfort = rk;
+        leftKneeDiscomfort = lk;
         timestamp = Instant.now();
     }
 
@@ -102,7 +106,7 @@ public class Report {
                   int wud, int etpo, int etto, int rwf, int iwp, int plbi, int rad, int aost,
                   String wt, int dtgu,
                   String longTermEffects, String whatDoYouLikeAboutIt, String whatDoYouHateAboutIt,
-                          String additionalNotes) {
+                  String additionalNotes) {
 
         rightShoulderDiscomfort = rs;
         leftShoulderDiscomfort = ls;
@@ -131,7 +135,7 @@ public class Report {
         lightEnoughForFullShift = lffs;
         fullRangeOfMotion = frange;
         wouldLikeToUseFrequently = wlf;
-        tooComplex =  tc;
+        tooComplex = tc;
         easyToUse = etu;
         wouldNeedTechnicalPerson = wntp;
         suitIsWellIntegrated = swi;
@@ -163,13 +167,7 @@ public class Report {
         timestamp = Instant.now();
 
 
-
     }
-
-
-
-
-
 
     public Long getId() {
         return id;
@@ -181,6 +179,14 @@ public class Report {
 
     public Employee getEmployee() {
         return employee;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public int getRightShoulderDiscomfort() {

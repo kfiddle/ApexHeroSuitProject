@@ -14,7 +14,12 @@
 
 <ul th:each="employee : ${employeesOfSingleCompany}">
 
-    <li th:text="${employee.firstName}"></li>
+    <div class="firstLine">
+        <li th:text="${employee.firstName}"></li>
+        <li th:text="${employee.lastName}"></li>
+    </div>
+
+<button th:text="'Add Employees For ' + ${companyName}"></button>
 
 </ul>
 

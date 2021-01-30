@@ -1,5 +1,14 @@
 
+* {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
 
+#greeting {
+    font-weight: 900;
+}
 
 body {
     background-color: lightgray;
@@ -7,10 +16,12 @@ body {
 
 
 .firstLine {
-    display:grid;
+    display: grid;
     grid-template-columns: 10% 10%;
 }
 
 .input {
     padding-right: 7%;
 }
+
+

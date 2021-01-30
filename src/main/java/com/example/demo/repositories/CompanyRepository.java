@@ -7,4 +7,5 @@ public interface CompanyRepository extends CrudRepository<Company, Long> {
     Company findByName(String companyName);
 
     Company findByBrowserName(String companyNameInBrowser);
+
 }

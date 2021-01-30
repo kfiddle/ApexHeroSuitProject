@@ -19,7 +19,7 @@ public class Company {
     private String name;
     private String browserName;
 
-    @OneToMany(mappedBy = "company")
+    @OneToMany
     private Collection <Employee> employees;
 
     @OneToMany(mappedBy = "company")

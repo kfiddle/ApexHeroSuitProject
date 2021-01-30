@@ -122,6 +122,7 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.company = company;
+        this.companyName = company.getName();
     }
 
     public Employee(String firstName, String lastName, Company company, JobSite jobSite) {
@@ -146,5 +147,7 @@ public class Employee {
 
     }
 
-
+    public void addReport(Report incomingReport) {
+        reports.add(incomingReport);
+    }
 }

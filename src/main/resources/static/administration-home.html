@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/administrative.css">
-    <title>All Companies</title>
+    <title>Administrative Home Page</title>
+
 </head>
 <body>
 <header>
@@ -14,11 +15,9 @@
 
 <div class="container">
 
-    <h1 id="greeting">Our Partnering Companies....</h1>
+    <h1 id="greeting">Administrative Dashboard</h1>
 
-    <ul>
-        <li th:each="company:${allCompanies}"><a th:href="@{${company.browserName} + '/' + ${company.id} + '/employee-entry-form'}" th:text="${company.name}"></a></li>
-    </ul>
+<h1><a href="/company-entry-form">Enter Companies</a></h1>
 
 </div>
 

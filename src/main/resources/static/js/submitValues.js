@@ -34,7 +34,7 @@ function subWithFetch() {
 
     let totalInches = parseInt(feet.value)*12 + parseInt(inches.value);
 
-    let formData = {
+    let formDataForSpreadSheet = {
         "Timestamp": currentTime,
         "firstName": firstName.value,
         "lastName": lastName.value,
@@ -65,7 +65,7 @@ function subWithFetch() {
 
     fetch('https://api.apispreadsheets.com/data/6917/', {
         method: "POST",
-        body: JSON.stringify({"data": formData}),
+        body: JSON.stringify({"data": formDataForSpreadSheet}),
     }).then(res => {
         if (res.status === 201) {
             alert("Thank you for submitting.")
@@ -73,6 +73,21 @@ function subWithFetch() {
             alert("there was an error.")
         }
     })
+
+    let formDataForJava = {
+
+
+
+
+    }
+
+
+
+
+
+
+
+
 }
 
 

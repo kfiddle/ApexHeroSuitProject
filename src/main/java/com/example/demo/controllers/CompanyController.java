@@ -45,9 +45,9 @@ public class CompanyController {
     }
 
 
-    @RequestMapping("/{companyNameInBrowser}/employee-entry-form")
-    public String displayFormPageForAddingEmployees(Model model, @PathVariable String companyNameInBrowser) {
-        model.addAttribute("company", companyRepo.findByBrowserName(companyNameInBrowser));
+    @RequestMapping("/{companyNameInBrowser}/{id}/employee-entry-form")
+    public String displayFormPageForAddingEmployees(@PathVariable Long id, Model model) {
+        model.addAttribute("company", companyRepo.findById(id).get());
         return "companyEmployeeEntryForm";
     }
 

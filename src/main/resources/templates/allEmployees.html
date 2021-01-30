@@ -18,17 +18,15 @@
     <h1 id="greeting">All Employees in our system...</h1>
 
 
-        <ul th:each="employee:${allEmployees}">
-            <div class="firstLine">
-            <li th:text="${employee.firstName}"></li>
-            <li th:text="${employee.lastName}"></li>
-            </div>
-            <!--    <li th:text="${employee.company.name}"></li>-->
-            <!--    <li th:text="${employee.companyForDisplay}"></li>-->
-        </ul>
+    <ul th:each="employee:${allEmployees}">
+
+        <li th:text="${employee.firstName}"></li>
+        <li th:text="${employee.lastName}"></li>
+        <li th:text="${employee.getCompanyName()}"></li>
+
+
+    </ul>
 
 </div>
-
-
 </body>
 </html>

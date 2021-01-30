@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Controller
 public class EmployeeController {
@@ -22,6 +24,7 @@ public class EmployeeController {
 
     @RequestMapping("/all-employees")
     public String displayAllEmployeesInSystem(Model model) {
+
         model.addAttribute("allEmployees", employeeRepo.findAll());
         return "allEmployees";
     }
