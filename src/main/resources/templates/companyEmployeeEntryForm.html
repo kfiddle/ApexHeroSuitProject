@@ -42,11 +42,16 @@
 
 
     <button onclick="submitNewEmployees()">Submit Form</button>
-
-
 </div>
 
+<button onclick="goToUserFormPage()"></button>
 
+<!--<h2><a th:href="@{${company.toBrowser()} + '/' + ${company.id} + '/user-form-basic'}">Company User Questionnaire</a></h2>-->
+
+<!--@GetMapping("/{companyNameInBrowser}/{id}/user-form-basic")-->
+
+
+<script src="/js/userPageNavigate.js"></script>
 <script src="/js/addEmployeeForm.js"></script>
 <script src="/js/submitEmployees.js"></script>
 

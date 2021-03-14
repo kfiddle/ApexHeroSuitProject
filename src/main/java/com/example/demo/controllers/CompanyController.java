@@ -18,6 +18,11 @@ public class CompanyController {
     @Resource
     CompanyRepository companyRepo;
 
+    @RequestMapping("/")
+    public String displayAdministrativeHomePage() {
+        return "administration-home";
+    }
+
     @RequestMapping("/company-entry-form")
     public String displayFormToAddCompanies() {
         return "companyEntryForm";

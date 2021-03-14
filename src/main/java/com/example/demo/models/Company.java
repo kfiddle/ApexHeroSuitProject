@@ -54,7 +54,7 @@ public class Company {
         this.browserName = toBrowser(name);
     }
 
-    public static String toBrowser(String nameToDisplay) {
+    public String toBrowser(String nameToDisplay) {
         String tempName = nameToDisplay.toLowerCase();
         char[] nameToCharArray = tempName.toCharArray();
         String displayedName = "";

@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Collection;
 
+@CrossOrigin
 @Controller
 public class EmployeeController {
 
@@ -24,15 +25,16 @@ public class EmployeeController {
 
     @RequestMapping("/all-employees")
     public String displayAllEmployeesInSystem(Model model) {
-
         model.addAttribute("allEmployees", employeeRepo.findAll());
         return "allEmployees";
     }
 
     @PostMapping("/add-employees")
     public void addNewEmployees(@RequestBody Employee employee) {
-        Company companyToGetEmployee = companyRepo.findByName(employee.getCompanyName());
-        Employee employeeToAdd = new Employee(employee.getFirstName(), employee.getLastName(), companyToGetEmployee);
-        employeeRepo.save(employeeToAdd);
+//        Company companyToGetEmployee = companyRepo.findByName(employee.getCompanyName());
+//        Employee employeeToAdd = new Employee(employee.getFirstName(), employee.getLastName(), companyToGetEmployee);
+
+        Employee employee1 = new Employee(employee.getFirstName(), employee.getLastName(), employee.getCompanyName());
+        employeeRepo.save(employee1);
     }
 }
