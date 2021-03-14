@@ -1,9 +1,7 @@
+const onwardButton = document.getElementById("onwardButton");
 
-const companyName = document.getElementById("companyName");
+onwardButton.addEventListener('click', () => {
+    window.location = "/" + companyName + "/" + companyId + "/" + "user-form-basic";
+});
 
 
-const goToUserFormPage = () => {
-
-
-
-}

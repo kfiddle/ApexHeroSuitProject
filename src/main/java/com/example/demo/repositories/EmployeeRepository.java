@@ -8,4 +8,8 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
     boolean findByFirstNameAndLastName(String firstName, String lastName);
 
     Employee findEmployeeByFirstNameAndLastName(String firstName, String lastName);
+
+
+     Employee findByLastName(String lastName);
+
 }

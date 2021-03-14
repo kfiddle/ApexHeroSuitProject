@@ -4,10 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--    <link rel="stylesheet" href="css/main.css">-->
     <link rel="stylesheet" href="/css/administrative.css">
-
-    <!--    <link rel="stylesheet" href="css/userBasicForm.css">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,37 +15,32 @@
 <body>
 
 <header>
-    <img src="/images/herowearLogo.jpg" alt="">
+    <img src="/images/newHeroLogo.png" alt="">
 </header>
 
 <div class="container">
 
-    <h1 id="greeting">HeroWear Employee Entry</h1>
+    <h1 id="greeting">Q Branch Employee Entry</h1>
     <h2 id="companyName" th:text="${company.name}"></h2>
-    <h2 id="subGreeting">Please enter the First and Last names of your Employees below</h2>
+    <h4 id="subGreeting">Please enter the First and Last names of your Employees below</h4>
 
 <div id="employeeFormDiv">
-<!--    <div class="firstLine">-->
-<!--        <div class="firstName">-->
-<!--            <input placeholder="First name *" type="text" id="firstName" name="firstName" required/><br>-->
-<!--        </div>-->
-<!--        <div class="lastName">-->
-<!--            <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>-->
-<!--        </div>-->
-<!--    </div>-->
+
 </div>
 
-    <button onclick="addEmployeeForm()">Add Employee Form</button>
+    <button class="button" onclick="addEmployeeForm()">Add Employee Form</button>
+    <button class="button" onclick="submitNewEmployees()">Submit Form</button>
 
-
-    <button onclick="submitNewEmployees()">Submit Form</button>
 </div>
 
-<button onclick="goToUserFormPage()"></button>
+<button class="button" id="onwardButton"><p id="toUserForm" th:text="${company.name} + ' user form'"></p></button>
 
-<!--<h2><a th:href="@{${company.toBrowser()} + '/' + ${company.id} + '/user-form-basic'}">Company User Questionnaire</a></h2>-->
+<script th:inline="javascript">
 
-<!--@GetMapping("/{companyNameInBrowser}/{id}/user-form-basic")-->
+    let companyId = [[${company.id}]];
+    let companyName = [[${browserName}]];
+
+</script>
 
 
 <script src="/js/userPageNavigate.js"></script>

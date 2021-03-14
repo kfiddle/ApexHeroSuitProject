@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Optional;
 
 @CrossOrigin
 @Controller
@@ -30,11 +31,13 @@ public class EmployeeController {
     }
 
     @PostMapping("/add-employees")
-    public void addNewEmployees(@RequestBody Employee employee) {
-//        Company companyToGetEmployee = companyRepo.findByName(employee.getCompanyName());
-//        Employee employeeToAdd = new Employee(employee.getFirstName(), employee.getLastName(), companyToGetEmployee);
+    public String addNewEmployees(@RequestBody Employee employee) {
 
-        Employee employee1 = new Employee(employee.getFirstName(), employee.getLastName(), employee.getCompanyName());
-        employeeRepo.save(employee1);
+        if (employeeRepo.findByLastName(employee.getLastName()) == null) {
+            Employee employeeToAdd = new Employee(employee.getFirstName(), employee.getLastName(), employee.getCompanyName());
+            employeeRepo.save(employeeToAdd);
+        }
+        return "redirect:/all-employees";
     }
 }
+

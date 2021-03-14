@@ -26,6 +26,11 @@ header {
     position: fixed;
 }
 
+#logo {
+    margin-top: 1rem;
+    width: 10vw;
+}
+
 #greeting {
     margin-top: 5%;
     margin-bottom: 0;

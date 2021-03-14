@@ -20,12 +20,14 @@
 </head>
 
 <body>
+
 <header>
-    <img src="/images/herowearLogo.jpg" alt="">
+    <img id="logo" src="/images/newHeroLogo.png" alt="">
 </header>
+
 <div class="container">
 
-    <h1 id="greeting">Herowear User Questionnaire for</h1>
+    <h1 id="greeting">Q Branch User Questionnaire for</h1>
     <h2 id="companyHeading" th:text="${company.name}"></h2>
     <h2 id="subGreeting">Please enter the requested information in the fields below</h2>
 
@@ -39,18 +41,6 @@
                 <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
             </div>
         </div>
-
-<!--        <div class="secondLine">-->
-
-<!--            <div class="dropDownDiv">-->
-<!--                <select name="company" class="dropDown" id="company">-->
-<!--                    <option selected="selected" disabled="disabled">Company</option>-->
-<!--                    <option>Gavin's Tailoring</option>-->
-<!--                    <option>Troy's General Antics</option>-->
-<!--                    <option>Beth's Train Company</option>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--        </div>-->
 
         <div class="thirdLine">
             <div class="age">

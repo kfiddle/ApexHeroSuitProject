@@ -27,5 +27,9 @@ const submitNewEmployees = () => {
             }
         )
     }
-    window.location = "/all-employees";
+    setTimeout(scootToEmployees, 300);
+
+    function scootToEmployees() {
+        window.location = "/all-employees";
+    }
 }
