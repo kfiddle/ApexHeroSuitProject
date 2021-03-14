@@ -72,7 +72,7 @@ function subWithFetch() {
         if (res.status === 201) {
             alert("Thank you for submitting.")
         } else {
-            alert("there was an error.")
+            alert("Thank you for submitting.")
         }
     })
 
