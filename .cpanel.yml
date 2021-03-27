@@ -1,4 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLYPATH=/
+    - export DEPLYPATH=/home/user/public_html/
+    - /bin/cp administration-home.html $DEPLOYPATH
