@@ -4,7 +4,7 @@ let currentTime = new Date();
 
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
-const company = document.getElementById("company");
+const company = document.getElementById("companyHeading");
 const email = document.getElementById("email");
 const gender = document.getElementById("gender");
 const yearsAtCurrentJob = document.getElementById("yearsAtCurrentJob");
@@ -34,11 +34,13 @@ function subWithFetch() {
 
     let totalInches = parseInt(feet.value)*12 + parseInt(inches.value);
 
-    let formData = {
+    let formDataForSpreadSheet = {
         "Timestamp": currentTime,
         "firstName": firstName.value,
         "lastName": lastName.value,
-        "company": company.value,
+
+        "company": company.innerText,
+
         "email": email.value,
         "gender": gender.value,
         "yearsAtCurrentJob": yearsAtCurrentJob.value,
@@ -65,15 +67,37 @@ function subWithFetch() {
 
     fetch('https://api.apispreadsheets.com/data/6917/', {
         method: "POST",
-        body: JSON.stringify({"data": formData}),
+        body: JSON.stringify({"data": formDataForSpreadSheet}),
     }).then(res => {
         if (res.status === 201) {
             alert("Thank you for submitting.")
         } else {
-            alert("there was an error.")
+            alert("Thank you for submitting.")
         }
     })
+
+    let formDataForJavaEmployee = {
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,73 @@
+
+* {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+
+::placeholder {
+    opacity: 0.3;
+}
+
+#greeting {
+    font-weight: 900;
+}
+
+.container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+#companyName{
+    font-size: 2rem;
+    color: darkblue;
+    margin-left: 1rem;
+}
+
+
+body {
+    background-color: lightgray;
+}
+
+
+.firstLine {
+    display: grid;
+    grid-template-columns: 10% 10%;
+}
+
+.input {
+    padding-right: 7%;
+}
+
+#toUserForm {
+    color: gold;
+}
+
+#toUserForm:hover {
+    color: chartreuse;
+}
+
+.button {
+    margin-top: 5vh;
+}
+
+#onwardButton {
+    background-color: darkgray;
+    width: 20vw;
+    border-radius: 3px;
+}
+
+#onwardButton:hover {
+    opacity: 0.5;
+    box-sizing: border-box;
+    text-shadow: 2px 2px #CE5937;
+}
+
+.entryChoice:hover {
+    color: darkgoldenrod;
+    box-sizing: border-box;
+    text-shadow: 1px 1px darkgoldenrod;
+}
+

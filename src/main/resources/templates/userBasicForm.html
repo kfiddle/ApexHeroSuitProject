@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/userBasicForm.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/userBasicForm.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <title>User Questionnaire</title>
@@ -20,12 +20,15 @@
 </head>
 
 <body>
+
 <header>
-    <img src="/images/herowearLogo.jpg" alt="">
+    <img id="logo" src="/images/newHeroLogo.png" alt="">
 </header>
+
 <div class="container">
 
-    <h1 id="greeting">HeroWear User Questionnaire</h1>
+    <h1 id="greeting">Q Branch User Questionnaire for</h1>
+    <h2 id="companyHeading" th:text="${company.name}"></h2>
     <h2 id="subGreeting">Please enter the requested information in the fields below</h2>
 
     <form id="myForm">
@@ -36,18 +39,6 @@
             </div>
             <div class="lastName">
                 <input placeholder="Last name *" type="text" id="lastName" name="lastName" required/><br>
-            </div>
-        </div>
-
-        <div class="secondLine">
-
-            <div class="dropDownDiv">
-                <select name="company" class="dropDown" id="company">
-                    <option selected="selected" disabled="disabled">Company</option>
-                    <option>Gavin's Tailoring</option>
-                    <option>Troy's General Antics</option>
-                    <option>Beth's Train Company</option>
-                </select>
             </div>
         </div>
 
@@ -171,9 +162,9 @@
     </div>
 
 
-    <div class="thirdLine">
-        <img id="bodyMap" src="images/frontAndBack.jpg" alt="">
-    </div>
+<!--    <div class="thirdLine">-->
+<!--        <img id="bodyMap" src="images/frontAndBack.jpg" alt="">-->
+<!--    </div>-->
 
     <div class="bodyPartSectionDiv">
         <div class="multiLine">
@@ -392,9 +383,9 @@
 
 </div>
 
-<script src="js/sliders.js"></script>
-<script src="js/accordions.js"></script>
-<script src="js/submitValues.js"></script>
+<script src="/js/sliders.js"></script>
+<script src="/js/accordions.js"></script>
+<script src="/js/submitValues.js"></script>
 
 
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/administrative.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Company Entry</title>
+</head>
+<body>
+<header>
+    <img src="/images/newHeroLogo.png" alt="">
+</header>
+
+<h1 id="greeting">Enter Companies below...</h1>
+
+    <div id="companyEntryFormDiv">
+
+    <input type="text" class="input" style="width:400px;height:40px" placeholder="company name" name="companyName">
+
+    </div>
+    <button onclick="addForm('Company Name')">Add Additional Form</button>
+
+    <button onclick="submitCompanies()" style="width:100px;height:40px">submit</button>
+
+
+
+
+<script src="js/addCompanies.js"></script>
+<script src="js/submitCompanies.js"></script>
+</body>
+</html>

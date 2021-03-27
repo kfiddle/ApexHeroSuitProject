@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/administrative.css">
+    <title>Company Page View</title>
+</head>
+<body>
+<header>
+    <img src="/images/newHeroLogo.png" alt="">
+</header>
+
+<h1 th:text="${companyName}"></h1>
+
+<ul th:each="employee : ${employeesOfSingleCompany}">
+
+    <div class="firstLine">
+        <li th:text="${employee.firstName}"></li>
+        <li th:text="${employee.lastName}"></li>
+    </div>
+
+<button th:text="'Add Employees For ' + ${companyName}"></button>
+
+</ul>
+
+
+</body>
+</html>

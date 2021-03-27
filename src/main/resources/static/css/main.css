@@ -14,8 +14,9 @@ body {
 
 html{
     color: #322923;
-    font-size: 1rem;
+    font-size: .75rem;
     font-family: 'Raleway', sans-serif;
+
 }
 
 
@@ -27,7 +28,7 @@ a{
 
 .container{
     background-color: black;
-    margin: 15% auto;
+    margin: 10% auto;
     max-width: 75rem;
     width: 80%;
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/administrative.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <title>Employees Entry Form</title>
+</head>
+<body>
+
+<header>
+    <img src="/images/newHeroLogo.png" alt="">
+</header>
+
+<div class="container">
+
+    <h1 id="greeting">Q Branch Employee Entry</h1>
+    <h2 id="companyName" th:text="${company.name}"></h2>
+    <h4 id="subGreeting">Please enter the First and Last names of your Employees below</h4>
+
+<div id="employeeFormDiv">
+
+</div>
+
+    <button class="button" onclick="addEmployeeForm()">Add Employee Field</button>
+    <button class="button" onclick="submitNewEmployees()">Submit Form</button>
+
+</div>
+
+<button class="button" id="onwardButton"><p id="toUserForm" th:text="${company.name} + ' user form'"></p></button>
+
+<script th:inline="javascript">
+
+    let companyId = [[${company.id}]];
+    let companyName = [[${browserName}]];
+
+</script>
+
+
+<script src="/js/userPageNavigate.js"></script>
+<script src="/js/addEmployeeForm.js"></script>
+<script src="/js/submitEmployees.js"></script>
+
+
+</body>
+</html>
