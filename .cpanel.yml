@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home_ssd/codingpo/public_html/
-    - export REPOPATH=/home_ssd/codingpo/repositories/ApexHeroSuitProject
+    - /bin/cp -R * $DEPLOYPATH
